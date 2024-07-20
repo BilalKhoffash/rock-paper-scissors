@@ -24,7 +24,7 @@ function playGame() {
     function playRound(humanChoice, computerChoice) { 
 
         if (humanChoice === computerChoice) {
-            console.log("Tie! Nobody wins")
+            console.log("Tie! Nobody wins");
         } else if (
             (humanChoice === "rock" && computerChoice === "scissors") || 
             (humanChoice === "scissors" && computerChoice === "paper") ||
