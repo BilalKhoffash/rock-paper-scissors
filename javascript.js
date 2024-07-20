@@ -17,8 +17,27 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    return prompt("Which do you choose to pick? Rock, Paper or Scissors?");
+    return prompt("Which do you choose to pick? Rock, Paper or Scissors?").toLowerCase();
 }
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+function playRound(humanChoice, computerChoice) { 
+
+    if (humanChoice === computerChoice) {
+        console.log("Tie! Nobody wins")
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") || 
+        (humanChoice === "scissors" && computerChoice === "paper") ||
+        (humanChoice === "paper" && computerChoice === "rock")
+    ) {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        humanScore += 1;
+    } else {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        computerScore += 1;
+    }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
