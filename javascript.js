@@ -16,7 +16,8 @@ function getComputerChoice() {
     }
 }
 
-const result = document.querySelector(".result")
+const result = document.querySelector(".result");
+const scoreboard = document.querySelector(".scoreboard");
 const choice = document.querySelector("#choices");
 
 choice.addEventListener('click', (e) => {
@@ -25,16 +26,6 @@ choice.addEventListener('click', (e) => {
 
     playRound(target.id, computerSelection);
 });
-
-function playGame() {
-    if (computerScore > humanScore) {
-        console.log("The computer won! Better luck next time..");
-    } else if (computerScore < humanScore) {
-        console.log("You won!!");
-    } else {
-        console.log("It was a boring draw!");
-    }
-}
 
 function playRound(humanChoice, computerChoice) { 
 
@@ -48,7 +39,20 @@ function playRound(humanChoice, computerChoice) {
         result.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
         humanScore += 1;
     } else {
-        result.textContent = `You lose! ${computerChoice} beats ${humanChoice}`
+        result.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
         computerScore += 1;
+    }
+
+    scoreboard.textContent = `Human score ${humanScore} - ${computerScore} Computer Score`;
+
+    if ((humanScore === 5) || (computerScore === 5)) {
+        if (humanScore === 5) {
+            alert("WOW! You the human just beat the computer! oh wait.");
+        } else {
+            alert("oof rip... didn't expect you to get beaten by the computer");
+        }
+
+        humanScore = 0;
+        computerScore = 0;
     }
 }
