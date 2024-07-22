@@ -16,6 +16,7 @@ function getComputerChoice() {
     }
 }
 
+const end = document.querySelector(".end");
 const result = document.querySelector(".result");
 const scoreboard = document.querySelector(".scoreboard");
 const choice = document.querySelector("#choices");
@@ -47,12 +48,13 @@ function playRound(humanChoice, computerChoice) {
 
     if ((humanScore === 5) || (computerScore === 5)) {
         if (humanScore === 5) {
-            alert("WOW! You the human just beat the computer! oh wait.");
+            end.textContent = "WOW! You the human just beat the computer! oh wait.";
         } else {
-            alert("oof rip... didn't expect you to get beaten by the computer");
+            end.textContent = "oof rip... didn't expect you to get beaten by the computer";
         }
 
         humanScore = 0;
         computerScore = 0;
+        scoreboard.textContent = `Human score ${humanScore} - ${computerScore} Computer Score`;
     }
 }
