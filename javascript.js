@@ -23,14 +23,17 @@ const choice = document.querySelector("#choices");
 
 choice.addEventListener('click', (e) => {
     let target = e.target;
-    target = target.parentElement;
     let computerSelection = getComputerChoice();
 
     if ((humanScore === 0) && (computerScore === 0)) {
         end.textContent = "";
     }
 
-    playRound(target.id, computerSelection);
+    if (target.parentElement.id === "choices") {
+        playRound(target.id, computerSelection);
+    } else { 
+        playRound(target.parentElement.id, computerSelection);
+    }
 });
 
 function playRound(humanChoice, computerChoice) { 
