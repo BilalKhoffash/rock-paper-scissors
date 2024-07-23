@@ -23,6 +23,7 @@ const choice = document.querySelector("#choices");
 
 choice.addEventListener('click', (e) => {
     let target = e.target;
+    target = target.parentElement;
     let computerSelection = getComputerChoice();
 
     if ((humanScore === 0) && (computerScore === 0)) {

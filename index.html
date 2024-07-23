@@ -4,23 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <style>
-            body {
-                text-align: center;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Rock - Paper - Scissors</h1>
-        <h2>view the console!</h2>
-        <ul id="choices" style="text-decoration: none; padding: 0; border: 0;">
-            <button id="rock">rock</button>
-            <button id="paper">paper</button>
-            <button id="scissors">scissors</button>
-        </ul>
-        <div class="result"></div>
-        <div class="scoreboard"></div>
-        <div class="end"></div>
+        <div class="wrapper">
+            <div class="header">
+                <h1 class="title">Rock - Paper - Scissors</h1>
+            </div>
+            <h2>Choose your weapon</h2>
+            <h3>First player to reach 5 points wins the game!</h3>
+            <ul id="choices">
+                <button id="rock"><img src="./images/rock-img.png" alt="rock"></button>
+                <button id="paper"><img src="./images/paper-img.png" alt="paper"></button>
+                <button id="scissors"><img src="./images/scissor-img.png" alt="scissors"></button>
+            </ul>
+            <div class="result"></div>
+            <div class="scoreboard"></div>
+            <div class="end"></div>
+        </div>
+        <footer>Copyright &copy; <a href="https://github.com/BilalKhoffash/">2024 BilalKhoffash</a></footer>
         <script src="javascript.js" refer></script>
     </body>
 </html>
