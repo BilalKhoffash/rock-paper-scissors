@@ -25,6 +25,10 @@ choice.addEventListener('click', (e) => {
     let target = e.target;
     let computerSelection = getComputerChoice();
 
+    if ((humanScore === 0) && (computerScore === 0)) {
+        end.textContent = "";
+    }
+
     playRound(target.id, computerSelection);
 });
 
@@ -55,6 +59,5 @@ function playRound(humanChoice, computerChoice) {
 
         humanScore = 0;
         computerScore = 0;
-        scoreboard.textContent = `Human score ${humanScore} - ${computerScore} Computer Score`;
     }
 }
