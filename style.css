@@ -4,7 +4,7 @@ html, body {
 body {
     text-align: center;
     background-color: #03045e;
-    font-family: "Bowlby One SC";
+    font-family: "Bowlby One SC", serif;
     padding: 0px;
     margin: 0px;
     color: #eca72c;
@@ -26,7 +26,7 @@ footer {
 
 .title {
     font-size: 56px;
-    font-family: 'Creepster';
+    font-family: 'Creepster', serif;
     margin: 0px;
     padding: 20px 0px;
 }
